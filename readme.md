@@ -23,12 +23,12 @@ npm start
 ## 💻 Build Configuration & Tooling
 
 - Diferent webpack configuration files for development and production
-- Target modern browsers using ES Modules and Bable presets
+- Target modern browsers using ES Modules and Babel presets
 - Sass & CSS Modules
 - CSS minified bundle file for production
 - Hashing JS & CSS bundles for production
 - Cache Busting
-- CDN External Dependencies for production
+- React & ReactDOM CDN External dependencies for production
 - Static code analysis with Eslint
 - Code Formating with Prettier
 - Pre-commit hooks with Husky
