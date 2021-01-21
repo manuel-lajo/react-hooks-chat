@@ -1,0 +1,20 @@
+@import 'src/assets/stylesheets/colors';
+@import 'src/assets/stylesheets/font-size';
+
+.button {
+  background-color: $main-color;
+  border: none;
+  border-radius: 0.25rem;
+  color: $white-color;
+  cursor: pointer;
+  font-size: $font-size-medium;
+  font-weight: bold;
+  min-height: 2.5rem;
+  outline: none;
+  padding: 0 2.25rem;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

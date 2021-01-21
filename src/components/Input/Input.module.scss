@@ -1,0 +1,35 @@
+@import 'src/assets/stylesheets/colors';
+@import 'src/assets/stylesheets/font-size';
+
+.input-label {
+  display: block;
+  font-size: $font-size-medium;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.input-container {
+  align-items: center;
+  border: 0.0625rem solid $grey-color;
+  border-radius: 0.5rem;
+  display: flex;
+  min-height: 2.5rem;
+  padding: 0 0.75rem;
+
+  .input-main-content {
+    flex: 1;
+    min-height: 2.25rem;
+
+    .input {
+      border: none;
+      font-size: $font-size-medium;
+      min-height: inherit;
+      outline: none;
+      width: 100%;
+    }
+
+    .input::-webkit-input-placeholder {
+      opacity: 0.4;
+    }
+  }
+}
