@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import useInputFocus from '../../../hooks/useInputFocus';
+import useScrollIntoView from '../../../hooks/useScrollIntoView';
 import ChatMessage from '../ChatMessage/ChatMessage';
 import Input from '../../Input/Input';
 import classes from './ChatPanel.module.scss';
@@ -7,18 +9,8 @@ const ChatPanel = props => {
   const { messages, typers, onSendText, onSendImage, onTyping } = props;
 
   const [message, setMessage] = useState('');
-  const inputRef = useRef();
-  const bottomRef = useRef();
-
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
-
-  useEffect(() => {
-    setTimeout(() => {
-      bottomRef.current && bottomRef.current.scrollIntoView();
-    }, 500);
-  }, []);
+  const inputRef = useInputFocus();
+  const bottomRef = useScrollIntoView(messages, 500);
 
   const onSubmit = async event => {
     event.preventDefault();

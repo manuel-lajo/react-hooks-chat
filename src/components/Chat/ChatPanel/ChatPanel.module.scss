@@ -1,37 +1,17 @@
 @import 'src/assets/stylesheets/colors';
+@import 'src/assets/stylesheets/mixins';
 @import 'src/assets/stylesheets/font-size';
 
 .chat-panel-container {
-  border: 0.0625rem solid $grey-color;
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0.25rem $grey-color;
-  display: flex;
-  flex-direction: column;
+  @include panel-style;
   height: 85%;
   padding: 1.5rem 1.5rem 0 1.5rem;
   width: 37.5rem;
 
   .messages-container {
+    @include scroll-style;
     flex: 1;
     overflow-y: auto;
-
-    &::-webkit-scrollbar {
-      width: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: $grey-color;
-      border-radius: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: $grey-dark-color;
-      border-radius: 0.5rem;
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background: $grey-dark-color;
-    }
   }
 
   .input-container {

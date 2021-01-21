@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import UsernameContext from '../../contexts/UsernameContext';
 import useInputFocus from '../../hooks/useInputFocus';
 import Button from '../../components/Button/Button';
@@ -9,10 +9,6 @@ const JoinChat = props => {
   const [, setUsernameContext] = useContext(UsernameContext);
   const [username, setUsername] = useState('');
   const inputRef = useInputFocus();
-
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
 
   const onSubmit = event => {
     event.preventDefault();
