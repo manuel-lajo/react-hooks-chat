@@ -1,10 +1,18 @@
 import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import Layout from './Layout';
+import JoinChat from './pages/JoinChat/JoinChat';
+import ChatRoom from './pages/ChatRoom/ChatRoom';
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello world</h1>
-    </div>
+    <Layout>
+      <Switch>
+        <Route path="/join" exact component={JoinChat} />
+        <Route path="/chat" exact component={ChatRoom} />
+        <Redirect to="/join" />
+      </Switch>
+    </Layout>
   );
 };
 
