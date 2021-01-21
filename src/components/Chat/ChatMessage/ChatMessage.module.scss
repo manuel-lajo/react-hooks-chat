@@ -1,0 +1,38 @@
+@import 'src/assets/stylesheets/colors';
+@import 'src/assets/stylesheets/font-size';
+
+.chat-message-container {
+  display: flex;
+  font-size: $font-size-medium;
+  margin-bottom: 1.5rem;
+
+  .user-avatar-container {
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    margin-right: 1rem;
+    min-width: 2.5rem;
+    overflow: hidden;
+    width: 2.5rem;
+
+    .user-avatar {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .username-label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+
+  .time-label {
+    color: $grey-dark-color;
+    font-size: $font-size-small;
+  }
+
+  .message-container {
+    margin-top: 0.25rem;
+    width: 28rem;
+    word-wrap: break-word;
+  }
+}

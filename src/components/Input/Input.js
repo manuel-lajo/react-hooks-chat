@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import classes from './Input.module.scss';
 
-const Input = props => {
+const Input = forwardRef(function Input(props, ref) {
   const { label, rightContent, ...otherProps } = props;
 
   return (
@@ -9,12 +9,12 @@ const Input = props => {
       {label ? <label className={classes['input-label']}>{label}</label> : null}
       <div className={classes['input-container']}>
         <div className={classes['input-main-content']}>
-          <input className={classes.input} {...otherProps} />
+          <input ref={ref} className={classes.input} {...otherProps} />
         </div>
         {rightContent || null}
       </div>
     </>
   );
-};
+});
 
 export default Input;

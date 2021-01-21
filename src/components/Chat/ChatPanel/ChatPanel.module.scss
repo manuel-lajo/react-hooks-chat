@@ -1,0 +1,63 @@
+@import 'src/assets/stylesheets/colors';
+@import 'src/assets/stylesheets/font-size';
+
+.chat-panel-container {
+  border: 0.0625rem solid $grey-color;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.25rem $grey-color;
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  width: 37.5rem;
+
+  .messages-container {
+    flex: 1;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $grey-color;
+      border-radius: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $grey-dark-color;
+      border-radius: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $grey-dark-color;
+    }
+  }
+
+  .input-container {
+    margin-bottom: 2rem;
+    margin-top: 0.25rem;
+    position: relative;
+
+    .send-button {
+      background: transparent;
+      border: none;
+      color: $grey-dark-color;
+      cursor: pointer;
+      font-size: $font-size-medium;
+      outline: none;
+    }
+
+    .send-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.4;
+    }
+
+    .typers-label {
+      bottom: -1.375rem;
+      color: $grey-dark-color;
+      font-size: $font-size-small;
+      position: absolute;
+    }
+  }
+}
